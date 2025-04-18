@@ -1,5 +1,3 @@
-# esp32-object-detection-
-
 # ESP32-CAM Object Detection System
 
 ## Overview
