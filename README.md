@@ -33,4 +33,4 @@ This project uses the **ESP32-CAM** module to stream live video over a local net
 
 ### 1. Clone the Repository
 ```bash
-git clone https://github.com/amin22241/esp32-object-detection-.git
+git clone https://github.com/amin22241/esp32-object-detection-/tree/main
