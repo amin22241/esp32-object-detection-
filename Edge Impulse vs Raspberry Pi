@@ -1,0 +1,64 @@
+# Edge Impulse vs Raspberry Pi Object Detection (with ESP32-CAM Highlights)
+
+This comparison explores the differences between using **Edge Impulse on the ESP32-CAM** and traditional **object detection with a Raspberry Pi**, focusing on performance, use cases, and deployment for embedded biomedical projects.
+
+---
+
+## Comparison Table
+
+| Feature                | **Edge Impulse on ESP32-CAM**                | **Object Detection on Raspberry Pi**                    |
+|------------------------|-----------------------------------------------|----------------------------------------------------------|
+| Platform Type          | Embedded ML (TinyML)                          | Full single-board computer                               |
+| Processing Power       | 240MHz dual-core (no GPU)                     | Quad-core 1.2GHz+ (some with GPU support)                |
+| Power Consumption      | Ultra low (< 1W)                              | Higher (2–6W or more)                                    |
+| Model Type             | Quantized (TensorFlow Lite Micro)             | Full TensorFlow, PyTorch, YOLO                           |
+| Deployment             | Via Edge Impulse (Arduino/PlatformIO)         | Manual setup, Python + libraries                         |
+| Use Case               | Simple classification / presence detection    | Complex object tracking, real-time video analysis        |
+| Cost                   | ~$7–10                                        | ~$35–100+ (board + camera + storage)                     |
+| Connectivity           | Wi-Fi + Bluetooth onboard                     | Ethernet / Wi-Fi modules (varies by model)               |
+| Size & Portability     | Very compact, fits in small enclosures        | Larger footprint, less ideal for wearables               |
+
+---
+
+## Strengths of the ESP32-CAM with Edge Impulse
+
+- **Low Power Consumption** – Perfect for portable or battery-powered devices
+- **Very Affordable** – Great for scaling up medical IoT prototypes
+- **Supports Edge ML** – Compatible with TinyML models trained on Edge Impulse
+- **Runs Offline** – No need for cloud or internet connection after deployment
+- **Compact Size** – Easily embedded in medical tools or wearables
+- **Built-in Wireless** – Onboard Wi-Fi + Bluetooth for remote communication
+
+---
+
+## When to Use Each
+
+### Use **ESP32-CAM + Edge Impulse** if:
+- You need a **low-cost**, **real-time**, **low-power** solution
+- You are creating **wearable**, **portable**, or **remote** biomedical devices
+- Your ML task is relatively **simple**, like **skin condition classification**, **presence detection**, or **early warning systems**
+- You’re targeting **rural or low-resource environments**
+
+### Use **Raspberry Pi** if:
+- You require **advanced computer vision** tasks
+- You need to detect **multiple objects**, perform **tracking**, or run **heavy models**
+- Power and size are not constraints (e.g., clinic or hospital settings)
+- You want to experiment with **full frameworks** like TensorFlow, OpenCV, or YOLO
+
+---
+
+## Example Applications
+
+- **ESP32-CAM**:
+  - Wound healing detection
+  - Remote fever screening using IR and camera
+  - Skin cancer anomaly detection
+
+- **Raspberry Pi**:
+  - Multi-patient behavior tracking
+  - Surgical tool recognition
+  - Real-time facial recognition in clinics
+
+---
+
+Let us know if you'd like to see this comparison as a diagram or infographic!
